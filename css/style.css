@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.9),rgb(255, 216, 42, 0.2)), url('/img/bg.jfif') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+ul {
+    color: #ffffff;
+    list-style-type: none;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+    list-style: none;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s ease-out;
+}
+
+.nav a:hover{
+    color: gold;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    word-spacing: 3rem;
+    font-family: 'Cinzel';
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+.nav-left {
+    padding-left: 25rem;
+}
+
+.nav-right {
+    padding-right: 25rem;
+}
+
+.slogan-container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.slogan {
+    color: #ffffff;
+    font-family: 'Cinzel';
+    font-size: 4vw;
+}
+
+.slogan-container a {
+    margin: 0 auto;
+    line-height: 50px; 
+    width: 200px; 
+    background-color: #ffd700;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Roboto';
+    text-decoration: none;
+    color: #000000;
+}
+
+.slogan-container a:hover {
+    background-color: #e7e7e7;
+    color: #000000;
+    transition: 0.3s ease-out;
+}
+
+#aboutus {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#aboutus h2 {
+    font-size: 50px;
+    padding: 20px;
+}
+
+#aboutus h3 {
+    font-family: 'Cinzel';
+    font-weight: bold;
+}
+
+#aboutus p {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Playfair Display';
+}
+
+.photos {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.3)), url('/img/beans.jpg') no-repeat center center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.photos img {
+    width: 450px;
+    box-shadow: 0px 6px 18px #000000;
+    transition: 0.2s ease;
+}
+
+.photos img:hover {
+    transform: scale(1.1);
+}
+
+.contact {
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Cinzel';
+}
+
+.contact img {
+    filter: brightness(0);
+}
+
+.contact img:hover {
+    color: gold;
+}
+
+.contacts{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.contacts a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Cinzel';
+    font-weight: 900;
+    transition: 0.3s ease-out;
+}
+
+.contacts a:hover{
+    color: gold;
+}

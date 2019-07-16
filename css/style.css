@@ -6,7 +6,7 @@
 
 
 .main {
-    background: linear-gradient(rgba(0, 0, 0, 0.9),rgb(255, 216, 42, 0.2)), url('/img/bg.jfif') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.9),rgb(255, 216, 42, 0.2)), url('img/bg.jfif') no-repeat center center;
     background-size: cover;
     height: 100vh;
 }
@@ -117,7 +117,7 @@ ul {
 
 .photos {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.3)), url('/img/beans.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.3)), url('img/beans.jpg') no-repeat center center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

@@ -4,56 +4,63 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #000000;
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*-------------------nav---------------------*/
+
+nav {
+    height: 8vh;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Cinzel';
+    font-weight: bolder;
+    letter-spacing: 3px;
+    transition: 0.3s ease-out;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+/*-------------------top-page---------------------*/
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
 
 .main {
     background: linear-gradient(rgba(0, 0, 0, 0.9),rgb(255, 216, 42, 0.2)), url('https://raw.githubusercontent.com/fernandoxmartin/Cafe42/master/img/bg.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
-}
-
-ul {
-    color: #ffffff;
-    list-style-type: none;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 40px;
-    list-style: none;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.3s ease-out;
-}
-
-.nav a:hover{
-    color: gold;
-}
-
-.links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 40%;
-    word-spacing: 3rem;
-    font-family: 'Cinzel';
-    letter-spacing: 3px;
-    font-size: 18px;
-}
-
-.nav-left {
-    padding-left: 25rem;
-}
-
-.nav-right {
-    padding-right: 25rem;
 }
 
 .slogan-container {
@@ -81,19 +88,23 @@ ul {
     font-family: 'Roboto';
     text-decoration: none;
     color: #000000;
+    transition: 0.3s ease-out;
 }
 
 .slogan-container a:hover {
     background-color: #e7e7e7;
     color: #000000;
-    transition: 0.3s ease-out;
 }
 
+/*-------------------about---------------------*/
+
 #aboutus {
+    background-color: #ffffff;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -105,6 +116,8 @@ ul {
 #aboutus h3 {
     font-family: 'Cinzel';
     font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #aboutus p {
@@ -115,26 +128,36 @@ ul {
     font-family: 'Playfair Display';
 }
 
+/*------------------carousel------------------------*/
+
 .photos {
     height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.3)), url('https://raw.githubusercontent.com/fernandoxmartin/Cafe42/master/img/beans.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-.photos img {
+#slider {
+    width: 40%;
+}
+
+.carousel-inner img {
     width: 450px;
-    box-shadow: 0px 6px 18px #000000;
-    transition: 0.2s ease;
+    height: 100%;
+    box-shadow: 0px 5px 20px 5px #000000;
 }
 
-.photos img:hover {
-    transform: scale(1.1);
+.carousel-item{
+    text-align: center;
 }
 
-.contact {
+/*-----------------footer-----------------*/
+
+.footer {
+    background-color: #ffffff;
     height: 20vh;
     text-align: center;
     display: flex;
@@ -149,12 +172,8 @@ ul {
     font-family: 'Cinzel';
 }
 
-.contact img {
+.footer img {
     filter: brightness(0);
-}
-
-.contact img:hover {
-    color: gold;
 }
 
 .contacts{
@@ -175,4 +194,77 @@ ul {
 
 .contacts a:hover{
     color: gold;
+}
+
+/*-----------------------mobile------------------------*/
+
+@media screen and (max-width: 600px){
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: #ffffff;
+        margin: 5px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 17;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #262626;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -15%);
+        -webkit-clip-path: circle(100px at 90% -15%);
+        transition: all 0.7s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links li a {
+        font-size: 30px;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1200px at 90% -15%);
+        -webkit-clip-path: circle(1200px at 90% -15%);
+        pointer-events: all;
+        z-index: 16;
+    }
+
+    #aboutus h2 {
+        font-size: 30px;
+    }
+    
+    #aboutus h3 {
+        font-size: 15px;
+    }
+    
+    #aboutus p {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    #slider {
+        width: 80%;
+    }
+    
+    .carousel-inner img {
+        width: 350px;
+    }
+    
+    .carousel-item{
+        text-align: center;
+    }
 }
